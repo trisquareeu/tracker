@@ -3,5 +3,6 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
 project(tracker)
 set(CMAKE_CXX_STANDARD 20)
+target_compile_options(app PRIVATE -Wall -Wextra -Wno-unused-parameter -Wno-unused-function -Wno-ignored-qualifiers)
 
 target_sources(app PRIVATE src/main.cpp)
